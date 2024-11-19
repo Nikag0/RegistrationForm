@@ -26,12 +26,12 @@ namespace UsersApp
         public Window2()
         {
             InitializeComponent();
+            userManager.LoadUsers();
         }
 
-        private User user = new User(); // создание объекта user класса User. Выделение памяти new и вызов конструктора
+        private UserManager userManager = new UserManager(); 
 
-        private DataUser dataUser = new DataUser(); // создание объекта datauser класса DataUser. Выделение памяти new и вызов конструктора
-
+        private DataUser dataUser = new DataUser();
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
 
@@ -40,7 +40,8 @@ namespace UsersApp
             dataUser.RepPassword = TextBoxRepPassword.Password;
             dataUser.Email = TextBoxEmail.Text;
 
-            int error = user.Check(dataUser);
+
+            int error = userManager.Register(dataUser);
             switch (error)
             {
                 case 1:
@@ -50,12 +51,16 @@ namespace UsersApp
                     MessageBox.Show("Passwords don't match", "Message");
                     break;
                 case 3:
-                    MessageBox.Show("There are less than 5 characters in a line or entered incorrectly", "Message");
+                    MessageBox.Show("Email was entered incorrectly", "Message");
+                    break;
+                case 4:
+                    MessageBox.Show("This login or Email is already registered", "Message");
                     break;
                 case 0:
-                    user.Write(dataUser);
+                    userManager.SaveUsers();
                     break;
             }
+
 
         }
             /*  public void MarkInvalid(Control control)

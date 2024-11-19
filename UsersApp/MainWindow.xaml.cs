@@ -21,10 +21,29 @@ namespace UsersApp
             InitializeComponent();
         }
 
+        //private UserManager userManager = new UserManager();
+
+       // private DataUser dataUser = new DataUser();
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window2 window2 = new Window2();
             window2.Show();
         }
+
+       private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            /* bool error = userManager.Login(dataUser);
+            switch (error)
+            {
+                case false:
+                    MessageBox.Show("The user is not registered", "Message");
+                    break;
+                case true:
+                    MessageBox.Show("login is successful", "Message");
+                    break;
+            }*/
+        }
+
     }
-}
+    }

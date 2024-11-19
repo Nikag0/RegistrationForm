@@ -18,7 +18,7 @@
                 <PasswordBox HorizontalAlignment="Center" materialDesign:HintAssist.Hint="Password" />
                 <Grid>
                     <Button  Click="Button_Click" HorizontalAlignment="Left" Content="Create an account" Style="{StaticResource MaterialDesignFlatButton}"/>
-                    <Button HorizontalAlignment="Right" Content="Sign in" Style="{StaticResource MaterialDesignFlatButton}" />
+                    <Button Click="Button_Click_1" HorizontalAlignment="Right" Content="Sign in" Style="{StaticResource MaterialDesignFlatButton}" />
                 </Grid>
             </StackPanel>
         </Border>
