@@ -26,19 +26,19 @@ namespace UsersApp
         public Window2()
         {
             InitializeComponent();
-            userManager.LoadUsers();
         }
 
-        private UserManager userManager = new UserManager(); 
+        public static UserManager userManager = new UserManager();
 
-        private DataUser dataUser = new DataUser();
+        public static DataUser dataUser = new DataUser();
+
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
 
-            dataUser.Login = TextBoxLogin.Text;
-            dataUser.Password = TextBoxPassword.Password;
-            dataUser.RepPassword = TextBoxRepPassword.Password;
-            dataUser.Email = TextBoxEmail.Text;
+            dataUser.Login = LoginRegistration.Text;
+            dataUser.Password = PasswordRegistration.Password;
+            dataUser.RepPassword = RepPasswordRegistration.Password;
+            dataUser.Email = EmailRegistration.Text;
 
 
             int error = userManager.Register(dataUser);

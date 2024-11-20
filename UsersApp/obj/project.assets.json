@@ -154,11 +154,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VIisualStudio\\new\\RegistrationForm\\UsersApp\\UsersApp.csproj",
+      "projectUniqueName": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\UsersApp.csproj",
       "projectName": "UsersApp",
-      "projectPath": "D:\\VIisualStudio\\new\\RegistrationForm\\UsersApp\\UsersApp.csproj",
+      "projectPath": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\UsersApp.csproj",
       "packagesPath": "C:\\Users\\Пользователь\\.nuget\\packages\\",
-      "outputPath": "D:\\VIisualStudio\\new\\RegistrationForm\\UsersApp\\obj\\",
+      "outputPath": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

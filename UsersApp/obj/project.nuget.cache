@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VvXajDnjOWs=",
+  "dgSpecHash": "Z2G2eQRCtQQ=",
   "success": true,
-  "projectFilePath": "D:\\VIisualStudio\\new\\RegistrationForm\\UsersApp\\UsersApp.csproj",
+  "projectFilePath": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\UsersApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Пользователь\\.nuget\\packages\\materialdesigncolors\\3.1.0\\materialdesigncolors.3.1.0.nupkg.sha512",
     "C:\\Users\\Пользователь\\.nuget\\packages\\materialdesignthemes\\5.1.0\\materialdesignthemes.5.1.0.nupkg.sha512",

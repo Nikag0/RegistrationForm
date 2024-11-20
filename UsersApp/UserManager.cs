@@ -39,7 +39,7 @@ namespace UsersApp
                 return 3;
             }
 
-            if (dataUsersList.Contains(dataUser.Login) )
+            if (dataUsersList.Any(s => s.Contains(dataUser.Login)) || dataUsersList.Any(s => s.Contains(dataUser.Email)))
             {
                 return 4;
             }
@@ -51,23 +51,25 @@ namespace UsersApp
 
        public void SaveUsers() //  сохранение пользователей из листа в файл
         {
-            File.WriteAllLines(path, dataUsersList);
+            File.WriteAllLines(Path, dataUsersList);
         }
 
         public void LoadUsers() // загрузку пользователей из файла в лист
         {
-            dataUsersList = File.ReadAllLines(path).ToList();
+            dataUsersList = File.ReadAllLines(Path).ToList();
         }
 
-       /* public bool Login(DataUser dataUser) // проверяет, существует ли пользователь с введёнными данными и возвращает результат
-          {
-               if (dataUsersList.Contains(dataUser.Login) || dataUsersList.Contains(dataUser.Email)
+      public bool Login(DataUser dataUser) // проверяет, существует ли пользователь с введёнными данными и возвращает результат
+        {
+
+            if (dataUsersList.Any(s => s.Contains(dataUser.LoginAuthorization)) && dataUsersList.Any(s => s.Contains(dataUser.PasswordAuthorization)))
             {
-                return false;
+                return true;
             }
             else
-                return true;
-          } */
+                return false;
+
+        }
 
         /* public void Write(DataUser dataUser)
  {
