@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "D:\\VIisualStudio\\RegistrationForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\viisualstudio\\registrationform\\usersapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\viisualstudio\\registrationform\\usersapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\viisualstudio\\registrationform\\usersapp\\window2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\window2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\viisualstudio\\registrationform\\usersapp\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,6 +13,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\viisualstudio\\registrationform\\usersapp\\datauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\datauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\viisualstudio\\registrationform\\usersapp\\hashingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\hashingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\viisualstudio\\registrationform\\usersapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\viisualstudio\\registrationform\\usersapp\\window2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\window2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\viisualstudio\\registrationform\\usersapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\viisualstudio\\registrationform\\usersapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -38,17 +42,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "DataUser.cs",
               "DocumentMoniker": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\DataUser.cs",
               "RelativeDocumentMoniker": "UsersApp\\DataUser.cs",
               "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\DataUser.cs",
               "RelativeToolTip": "UsersApp\\DataUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T09:27:52.493Z",
               "IsPinned": true,
@@ -56,13 +60,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "UserManager.cs",
               "DocumentMoniker": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\UserManager.cs",
               "RelativeDocumentMoniker": "UsersApp\\UserManager.cs",
-              "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\UserManager.cs",
-              "RelativeToolTip": "UsersApp\\UserManager.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowEEAAAANAAAAAAAAAA==",
+              "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\UserManager.cs*",
+              "RelativeToolTip": "UsersApp\\UserManager.cs*",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAiwEYAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T08:30:34.713Z",
               "IsPinned": true,
@@ -70,65 +74,75 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Window2.xaml.cs",
               "DocumentMoniker": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\Window2.xaml.cs",
               "RelativeDocumentMoniker": "UsersApp\\Window2.xaml.cs",
               "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\Window2.xaml.cs",
               "RelativeToolTip": "UsersApp\\Window2.xaml.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwCgAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T10:16:41.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "UsersApp\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\MainWindow.xaml.cs*",
-              "RelativeToolTip": "UsersApp\\MainWindow.xaml.cs*",
-              "ViewState": "AgIAABgAAAAAAAAAAAAUwCsAAABGAAAAAAAAAA==",
+              "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "UsersApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAvwC0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T07:21:41.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "HashingService.cs",
+              "DocumentMoniker": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\HashingService.cs",
+              "RelativeDocumentMoniker": "UsersApp\\HashingService.cs",
+              "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\HashingService.cs",
+              "RelativeToolTip": "UsersApp\\HashingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T10:36:48.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Window2.xaml",
               "DocumentMoniker": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\Window2.xaml",
               "RelativeDocumentMoniker": "UsersApp\\Window2.xaml",
               "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\Window2.xaml",
               "RelativeToolTip": "UsersApp\\Window2.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-06T09:59:45.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T09:59:45.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "UsersApp\\MainWindow.xaml",
               "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\MainWindow.xaml",
               "RelativeToolTip": "UsersApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-06T07:21:43.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T07:21:43.1Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\App.xaml",
               "RelativeDocumentMoniker": "UsersApp\\App.xaml",
               "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\App.xaml",
               "RelativeToolTip": "UsersApp\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-06T07:24:23.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T07:24:23.03Z"
             }
           ]
         }

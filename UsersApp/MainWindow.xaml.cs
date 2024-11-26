@@ -39,6 +39,7 @@ namespace UsersApp
         {
             dataUser.LoginAuthorization = LoginAuthorization.Text;
             dataUser.PasswordAuthorization = PasswordAuthorization.Password;
+
             if (LoginAuthorization.Text == "" || PasswordAuthorization.Password == "")
             {
                 MessageBox.Show("No login or password has been entered", "Message");
@@ -55,7 +56,6 @@ namespace UsersApp
                     MessageBox.Show("login is successful", "Message");
                     break;
             }
-        }
-
+       }
     }
-    }
+}

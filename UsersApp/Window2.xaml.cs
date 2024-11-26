@@ -34,12 +34,16 @@ namespace UsersApp
 
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
+            dataUser.LoginRegistration = LoginRegistration.Text;
+            dataUser.PasswordRegistration = PasswordRegistration.Password;
+            dataUser.RepPasswordRegistration = RepPasswordRegistration.Password;
+            dataUser.EmailRegistration = EmailRegistration.Text;
 
-            dataUser.Login = LoginRegistration.Text;
-            dataUser.Password = PasswordRegistration.Password;
-            dataUser.RepPassword = RepPasswordRegistration.Password;
-            dataUser.Email = EmailRegistration.Text;
-
+            HashingService hashingService = new HashingService();
+            if (hashingService.VerifyPassword(dataUser.PasswordRegistration, dataUser.RepPasswordRegistration) == false)
+            {
+                return;
+            }
 
             int error = userManager.Register(dataUser);
             switch (error)
@@ -48,36 +52,22 @@ namespace UsersApp
                     MessageBox.Show("There are less than 5 characters in a line", "Message");
                     break;
                 case 2:
-                    MessageBox.Show("Passwords don't match", "Message");
-                    break;
-                case 3:
                     MessageBox.Show("Email was entered incorrectly", "Message");
                     break;
-                case 4:
+                case 3:
                     MessageBox.Show("This login or Email is already registered", "Message");
                     break;
                 case 0:
-                    userManager.SaveUsers();
+                    MessageBox.Show("Registrations is done", "Message");
+                    this.Close();
                     break;
             }
-
-
-        }
-            /*  public void MarkInvalid(Control control)
-  {
-      control.ToolTip = "Minimum of 5 characters";
-      control.Background = Brushes.DarkRed;
-  }
-
-  public void MarkCorrect(Control control)
-  {
-      control.ToolTip = "";
-      control.Background = Brushes.Transparent;
-  }*/
 
         }
 
     }
+
+}
 
 
 

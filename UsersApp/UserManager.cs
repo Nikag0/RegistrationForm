@@ -11,6 +11,12 @@ using static System.Net.Mime.MediaTypeNames;
 using System.Collections.Generic;
 using System.Windows.Documents;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
+using System.Diagnostics.Eventing.Reader;
+using MaterialDesignColors;
+using System.Reflection;
+using System.Reflection.Metadata.Ecma335;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace UsersApp
 {
@@ -20,32 +26,45 @@ namespace UsersApp
 
         public string Path { get => path; set => path = value; }
 
+        string patternPas = @"(?<=;)(.*?)(?=;)";
+        string patternLog = @"(.*?)(?=;)";
+
         public List<string> dataUsersList = new List<string>();
+
+        HashingService hashing = new HashingService();
 
         public int Register(DataUser dataUser) // существует ли уже пользователь с таким именем, и если нет, добавляет его в список
         {
-            if (dataUser.Login.Length < 5 || dataUser.Password.Length < 5 || dataUser.Email.Length < 5)
+            if (dataUser.EmailRegistration.Length < 5 || dataUser.LoginRegistration.Length < 5)
             {
                 return 1;
             }
 
-            else if (dataUser.Password != dataUser.RepPassword)
+            if (!dataUser.EmailRegistration.Contains("@") || !dataUser.EmailRegistration.Contains("."))
             {
                 return 2;
             }
 
-            if (!dataUser.Email.Contains("@") || !dataUser.Email.Contains("."))
+            if (dataUsersList.Count == 0) // проверка, на пустой лист
             {
-                return 3;
+                dataUsersList.Add(dataUser.LoginRegistration + ";" + hashing.HashPassword(dataUser.PasswordRegistration) + ";" + dataUser.EmailRegistration);
+                SaveUsers();
+                return 0;
             }
 
-            if (dataUsersList.Any(s => s.Contains(dataUser.Login)) || dataUsersList.Any(s => s.Contains(dataUser.Email)))
+            foreach (string str in dataUsersList)
             {
-                return 4;
-            }
-            else
-                dataUsersList.Add(dataUser.Login + ";" + dataUser.Password + ";" + dataUser.Email);
+                Match log = Regex.Match(str, patternLog);
 
+                if (dataUser.LoginRegistration == log.Value)
+                {
+                    return 3;
+                }
+
+            }
+
+            dataUsersList.Add(dataUser.LoginRegistration + ";" + hashing.HashPassword(dataUser.PasswordRegistration) + ";" + dataUser.EmailRegistration);
+            SaveUsers();
             return 0;
         }
 
@@ -60,22 +79,20 @@ namespace UsersApp
         }
 
       public bool Login(DataUser dataUser) // проверяет, существует ли пользователь с введёнными данными и возвращает результат
-        {
-
-            if (dataUsersList.Any(s => s.Contains(dataUser.LoginAuthorization)) && dataUsersList.Any(s => s.Contains(dataUser.PasswordAuthorization)))
+      {
+            foreach (string str in dataUsersList)
             {
-                return true;
+                Match log = Regex.Match(str, patternLog);
+                Match pas = Regex.Match(str, patternPas);
+
+                if (dataUser.LoginAuthorization == log.Value && hashing.HashPassword(dataUser.PasswordAuthorization) == pas.Value) // Если лог и хэш пароля совпадают,
+                {
+                    return true;
+                }            
+
             }
-            else
-                return false;
-
-        }
-
-        /* public void Write(DataUser dataUser)
- {
-     using (StreamWriter writer = new StreamWriter(path, true))
-     writer.WriteLine(dataUser.Login + ";" + dataUser.Password + ";" + dataUser.Email);
- } */
+            return false;
+      }
 
     }
 }
