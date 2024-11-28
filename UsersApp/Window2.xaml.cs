@@ -20,7 +20,6 @@ using static UsersApp.Window2;
 
 namespace UsersApp
 {
-
     public partial class Window2 : Window
     {
         public Window2()
@@ -28,9 +27,10 @@ namespace UsersApp
             InitializeComponent();
         }
 
-        public static UserManager userManager = new UserManager();
-
         public static DataUser dataUser = new DataUser();
+        public static DataСorrectness dataСorrectness = new DataСorrectness();
+        public static HashingService hashingService = new HashingService();
+
 
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
@@ -38,35 +38,24 @@ namespace UsersApp
             dataUser.PasswordRegistration = PasswordRegistration.Password;
             dataUser.RepPasswordRegistration = RepPasswordRegistration.Password;
             dataUser.EmailRegistration = EmailRegistration.Text;
+            
 
-            HashingService hashingService = new HashingService();
-            if (hashingService.VerifyPassword(dataUser.PasswordRegistration, dataUser.RepPasswordRegistration) == false)
+            if (dataСorrectness.DataValitation(LoginRegistration.Text, PasswordRegistration.Password, RepPasswordRegistration.Password, EmailRegistration.Text) == false)
             {
                 return;
             }
 
-            int error = userManager.Register(dataUser);
-            switch (error)
+            if (dataСorrectness.AlreadyRegistred(dataUser) == false)
             {
-                case 1:
-                    MessageBox.Show("There are less than 5 characters in a line", "Message");
-                    break;
-                case 2:
-                    MessageBox.Show("Email was entered incorrectly", "Message");
-                    break;
-                case 3:
-                    MessageBox.Show("This login or Email is already registered", "Message");
-                    break;
-                case 0:
-                    MessageBox.Show("Registrations is done", "Message");
-                    this.Close();
-                    break;
+                return;
             }
-
+            else
+            {
+                dataUser.SaveUsers();
+                this.Close();
+            }
         }
-
     }
-
 }
 
 

@@ -26,7 +26,7 @@ namespace UsersApp
         public MainWindow()
         {
             InitializeComponent();
-            userManager.LoadUsers();
+            dataUser.LoadUsers();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -35,27 +35,15 @@ namespace UsersApp
             window2.Show();
         }
 
-       private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             dataUser.LoginAuthorization = LoginAuthorization.Text;
             dataUser.PasswordAuthorization = PasswordAuthorization.Password;
 
-            if (LoginAuthorization.Text == "" || PasswordAuthorization.Password == "")
+            if (dataСorrectness.UserIsRegistred(dataUser) == false)
             {
-                MessageBox.Show("No login or password has been entered", "Message");
                 return;
             }
-
-            bool error = userManager.Login(dataUser);
-            switch (error)
-            {
-                case false:
-                    MessageBox.Show("The user is not registered or password was entered incorrectly", "Message");
-                    break;
-                case true:
-                    MessageBox.Show("login is successful", "Message");
-                    break;
-            }
-       }
+        }
     }
 }
