@@ -9,12 +9,13 @@ using System.IO;
 
 namespace UsersApp
 {
+    // Проверка на корректность данных в окнах регистрации и авторизации.
     public class DataСorrectness
     {
         string patternFindLog = @"(.*?)(?=;)";
-        string patternFindEmail = @".+?;.+?;(.+)";
         string patternFindPas = @"(?<=;)(.*?)(?=;)";
-
+        string patternFindEmail = @".+?;.+?;(.+)";
+        // Валидация данных в окне регистрации.
         public bool DataValitation(string login, string password,string repPassword, string email)
         {
             var patternEmail = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*@((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
@@ -42,12 +43,12 @@ namespace UsersApp
             }
             return true;
         }
-
+        // Проверка в окне регистрации, существует ли пользователь с введёнными данными.
          public bool AlreadyRegistred(DataUser dataUser)
         {
             if (dataUser.dataUsersList.Count() == 0)
             {
-                MessageBox.Show("Registrations is fuck", "Message");
+                MessageBox.Show("Registrations is done", "Message");
                 return true;
             } 
 
@@ -74,7 +75,7 @@ namespace UsersApp
             return true;
         }
 
-        // Проверяет, существует ли пользователь с введёнными данными и возвращает результат.
+        // Проверка в окне авторизации, существует ли пользователь с введёнными данными.
         public bool UserIsRegistred(DataUser dataUser)
         {
 
