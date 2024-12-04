@@ -6,12 +6,19 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Compile Update="AuthorizationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RegistrationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AuthorizationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Window2.xaml">
+    <Page Update="RegistrationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
