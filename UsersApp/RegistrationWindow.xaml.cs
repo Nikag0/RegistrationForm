@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -25,26 +26,46 @@ namespace UsersApp
         public RegistrationWindow()
         {
             InitializeComponent();
-            userManager.LoadUsers();
         }
 
-        private UserManager userManager = new UserManager();
-        private DataUser dataUser = new DataUser();
         private HashingService hashingService = new HashingService();
+
+        private DataUserRegistration dataUsersRegistration = new DataUserRegistration();
 
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
-            if (userManager.DataValitation(LoginRegistration.Text, PasswordRegistration.Password, RepPasswordRegistration.Password, EmailRegistration.Text) == false)
+            dataUsersRegistration.Login = LoginRegistration.Text;
+            dataUsersRegistration.HashPassword = hashingService.HashPassword(PasswordRegistration.Password);
+            dataUsersRegistration.HashRepPassword = hashingService.HashPassword(RepPasswordRegistration.Password);
+            dataUsersRegistration.Email = EmailRegistration.Text;
+
+            int error = userManager.DataValitation(dataUsersRegistration);
+
+            switch (error)
             {
-                return;
+                case 1:
+                    MessageBox.Show("login must be longer than 5 characters.");
+                    break;
+                case 2:
+                    MessageBox.Show("Password must be longer than 6 characters and contain lowercase and uppercase letters, a numeric value and special character.", "Message");
+                    break;
+                case 3:
+                    MessageBox.Show("Passwords don't match", "Message");
+                    break;
+                case 4:
+                    MessageBox.Show("Email was entered incorrectly", "Message");
+                    break;
             }
 
-            if (userManager.AlreadyRegistred(LoginRegistration.Text, hashingService.HashPassword(PasswordRegistration.Password), EmailRegistration.Text) == false)
+            if (!userManager.AlreadyRegistred(dataUsersRegistration))
             {
+
+                MessageBox.Show("This login or email is already registered", "Message");
                 return;
             }
             else
             {
+                MessageBox.Show("Registrations is done", "Message");
                 this.Close();
             }
         }

@@ -18,84 +18,69 @@ namespace UsersApp
         private string path = "Data.txt";
         public string Path { get => path; set => path = value; }
 
-        public List<DataUser> DataUsersList = new List<DataUser>();
+        private List<DataUserRegistration> dataUsersList = new List<DataUserRegistration>();
 
-        HashingService hashing = new HashingService();
+        private HashingService hashing = new HashingService();
 
         // Валидация данных в окне регистрации.
-        public bool DataValitation(string login, string password, string repPassword, string email)
+        public int DataValitation(DataUserRegistration dataUsersRegistration)
         {
             var patternEmail = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*@((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
             var patternPassword = new Regex(@"^(?=.{6,16}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*$");
 
-            if (login.Length < 5)
+            if (dataUsersRegistration.Login.Length < 5)
             {
-                MessageBox.Show("login must be longer than 5 characters.");
-                return false;
+                return 1;
             }
-            if (!patternPassword.IsMatch(password))
+            if (!patternPassword.IsMatch(dataUsersRegistration.HashPassword))
             {
-                MessageBox.Show("Password must be longer than 6 characters and contain lowercase and uppercase letters, a numeric value and special character.", "Message");
-                return false;
+                return 2;
             }
-            else if (password != repPassword)
+            else if (dataUsersRegistration.HashPassword != dataUsersRegistration.HashRepPassword)
             {
-                MessageBox.Show("Passwords don't match", "Message");
-                return false;
+                return 3;
             }
-            if (!patternEmail.IsMatch(email))
+            if (!patternEmail.IsMatch(dataUsersRegistration.Email))
             {
-                MessageBox.Show("Email was entered incorrectly", "Message");
-                return false;
+                return 4;
             }
-            return true;
+            return 0;
         }
 
         // Проверка в окне регистрации, существует ли пользователь с введёнными данными.
-        public bool AlreadyRegistred(string login, string password, string email)
+        public bool AlreadyRegistred(DataUserRegistration dataUserRegistration)
         {
-            var foundUser = DataUsersList.FirstOrDefault(user => user.Login == login || user.Login == login);
+            DataUser foundUser = dataUsersList.FirstOrDefault(user => user.Login == dataUserRegistration.Login || user.Login == dataUserRegistration.Login);
 
             if (foundUser != null)
             {
-                MessageBox.Show("This login or email is already registered", "Message");
                 return false;
 
             }
             else
             {
-                DataUser newuser = new DataUser();
-                newuser.Login = login;
-                newuser.Password = password;
-                newuser.Email = email;
+                DataUserRegistration newuser = new DataUserRegistration();
+                newuser.Login = dataUserRegistration.Login;
+                newuser.HashPassword = dataUserRegistration.HashPassword;
+                newuser.Email = dataUserRegistration.Email;
 
-                DataUsersList.Add(newuser);
+                dataUsersList.Add(newuser);
                 SaveUsers();
-                MessageBox.Show("Registrations is done", "Message");
                 return true;
             }
         }
 
         // Проверка в окне авторизации, существует ли пользователь с введёнными данными.
-        public bool UserIsRegistred(string login, string password)
+        public bool UserIsRegistred(DataUser dataUser)
         {
-
-            if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))
-            {
-                MessageBox.Show("No login or password has been entered", "Message");
-                return false;
-            }
-
-            var foundUser = DataUsersList.FirstOrDefault(user => user.Login == login && user.Password == hashing.HashPassword(password));
+            DataUser foundUser = dataUsersList.FirstOrDefault(user => user.Login == dataUser.Login && user.HashPassword == dataUser.HashPassword);
 
             if (foundUser != null)
             {
-                MessageBox.Show("login is successful", "Message");
                 return true;
             }
             else
             {
-                MessageBox.Show("The user is not registered or password was entered incorrectly", "Message");
                 return false;
             }
         }
@@ -104,10 +89,10 @@ namespace UsersApp
         {
             using (StreamWriter writer = new StreamWriter(Path))
             {
-                foreach (var user in DataUsersList)
+                foreach (DataUserRegistration user in dataUsersList)
                 {
                     // Запись данных одного объекта в строку
-                    string line = $"{user.Login};{user.Password};{user.Email}";
+                    string line = $"{user.Login};{user.HashPassword};{user.Email}";
                     writer.WriteLine(line); // Записываем строку в файл
                 }
             }
@@ -120,11 +105,11 @@ namespace UsersApp
             foreach (string str in dataString)
             {
                 string[] data = str.Split(';');
-                DataUser user = new DataUser();
+                DataUserRegistration user = new DataUserRegistration();
                 user.Login = data[0];     // login
-                user.Password = data[1];  // Hashpassword
+                user.HashPassword = data[1];  // Hashpassword
                 user.Email = data[2];     // email
-                DataUsersList.Add(user);
+                dataUsersList.Add(user);
             }
         }
     }

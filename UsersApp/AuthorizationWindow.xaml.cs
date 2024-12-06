@@ -22,10 +22,12 @@ namespace UsersApp
 {
     public partial class AuthorizationWindow : Window
     {
-        private UserManager userManagerAuthorization = new UserManager();
+        UserManager userManager = new UserManager();
+     
         public AuthorizationWindow()
         {
             InitializeComponent();
+            userManager.LoadUsers();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -36,11 +38,22 @@ namespace UsersApp
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            userManagerAuthorization.LoadUsers();
+            DataUser dataUser = new DataUser();
+            HashingService hashingService = new HashingService();
 
-            if (userManagerAuthorization.UserIsRegistred(LoginAuthorization.Text, PasswordAuthorization.Password) == false)
+            dataUser.Login = LoginAuthorization.Text;
+            dataUser.HashPassword = hashingService.HashPassword(PasswordAuthorization.Password);
+
+            userManager.LoadUsers();
+
+            if (!userManager.UserIsRegistred(dataUser))
             {
+                MessageBox.Show("The user is not registered or password was entered incorrectly", "Message");
                 return;
+            }
+            else
+            {
+                MessageBox.Show("login is successful", "Message");
             }
         }
     }
