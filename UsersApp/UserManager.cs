@@ -18,12 +18,10 @@ namespace UsersApp
         private string path = "Data.txt";
         public string Path { get => path; set => path = value; }
 
-        private List<DataUserRegistration> dataUsersList = new List<DataUserRegistration>();
-
-        private HashingService hashing = new HashingService();
+        private List<DataUser> dataUsersList = new List<DataUser>();
 
         // Валидация данных в окне регистрации.
-        public int DataValitation(DataUserRegistration dataUsersRegistration)
+        public int DataValitation(DataUserPass dataUsersRegistration)
         {
             var patternEmail = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*@((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
             var patternPassword = new Regex(@"^(?=.{6,16}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*$");
@@ -32,11 +30,11 @@ namespace UsersApp
             {
                 return 1;
             }
-            if (!patternPassword.IsMatch(dataUsersRegistration.HashPassword))
+            if (!patternPassword.IsMatch(dataUsersRegistration.Password))
             {
                 return 2;
             }
-            else if (dataUsersRegistration.HashPassword != dataUsersRegistration.HashRepPassword)
+            else if (dataUsersRegistration.Password != dataUsersRegistration.RepPassword)
             {
                 return 3;
             }
@@ -48,21 +46,20 @@ namespace UsersApp
         }
 
         // Проверка в окне регистрации, существует ли пользователь с введёнными данными.
-        public bool AlreadyRegistred(DataUserRegistration dataUserRegistration)
+        public bool AlreadyRegistred(DataUserPass dataUsersRegistration)
         {
-            DataUser foundUser = dataUsersList.FirstOrDefault(user => user.Login == dataUserRegistration.Login || user.Login == dataUserRegistration.Login);
+            bool foundUser = dataUsersList.Any(user => user.Login == dataUsersRegistration.Login || user.Login == dataUsersRegistration.Login);
 
-            if (foundUser != null)
+            if (foundUser)
             {
                 return false;
-
             }
             else
             {
-                DataUserRegistration newuser = new DataUserRegistration();
-                newuser.Login = dataUserRegistration.Login;
-                newuser.HashPassword = dataUserRegistration.HashPassword;
-                newuser.Email = dataUserRegistration.Email;
+                DataUser newuser = new DataUser();
+                newuser.Login = dataUsersRegistration.Login;
+                newuser.HashPassword = HashingService.HashPassword(dataUsersRegistration.Password);
+                newuser.Email = dataUsersRegistration.Email;
 
                 dataUsersList.Add(newuser);
                 SaveUsers();
@@ -71,11 +68,11 @@ namespace UsersApp
         }
 
         // Проверка в окне авторизации, существует ли пользователь с введёнными данными.
-        public bool UserIsRegistred(DataUser dataUser)
+        public bool UserIsRegistred(DataUserPass dataUserLogin)
         {
-            DataUser foundUser = dataUsersList.FirstOrDefault(user => user.Login == dataUser.Login && user.HashPassword == dataUser.HashPassword);
+            bool foundUser = dataUsersList.Any(user => user.Login == dataUserLogin.Login && user.HashPassword == HashingService.HashPassword(dataUserLogin.Password));
 
-            if (foundUser != null)
+            if (foundUser)
             {
                 return true;
             }
@@ -89,26 +86,26 @@ namespace UsersApp
         {
             using (StreamWriter writer = new StreamWriter(Path))
             {
-                foreach (DataUserRegistration user in dataUsersList)
+                foreach (DataUser user in dataUsersList)
                 {
-                    // Запись данных одного объекта в строку
                     string line = $"{user.Login};{user.HashPassword};{user.Email}";
-                    writer.WriteLine(line); // Записываем строку в файл
+                    writer.WriteLine(line);
                 }
             }
         }
 
         public void LoadUsers()
         {
+            dataUsersList.Clear();
             string[] dataString = File.ReadAllLines(Path);
 
             foreach (string str in dataString)
             {
                 string[] data = str.Split(';');
-                DataUserRegistration user = new DataUserRegistration();
-                user.Login = data[0];     // login
-                user.HashPassword = data[1];  // Hashpassword
-                user.Email = data[2];     // email
+                DataUser user = new DataUser();
+                user.Login = data[0];           // login
+                user.HashPassword = data[1];    // Hashpassword
+                user.Email = data[2];           // email
                 dataUsersList.Add(user);
             }
         }

@@ -5,10 +5,10 @@ using System.Text.RegularExpressions;
 using System.Windows;
 namespace UsersApp
 {
-    public class HashingService
+    public static class HashingService
     {
         // Хэширование пароля.
-        public string HashPassword(string password)
+        public static string HashPassword(string password)
         {
             // Здесь создается экземпляр класса SHA1, который является частью библитеки System.Security.Cryptography.
             // Использование блока using гарантирует, что ресурсы, выделенные под объект sha128, будут освобождены после завершения работы метода.

@@ -30,23 +30,22 @@ namespace UsersApp
             userManager.LoadUsers();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonCreateAccountClick(object sender, RoutedEventArgs e)
         {
-            RegistrationWindow registrationWindow = new RegistrationWindow();
+            RegistrationWindow registrationWindow = new RegistrationWindow(userManager);
             registrationWindow.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ButtonSignInClick(object sender, RoutedEventArgs e)
         {
-            DataUser dataUser = new DataUser();
-            HashingService hashingService = new HashingService();
+            DataUserPass dataUserLogin = new DataUserPass();
 
-            dataUser.Login = LoginAuthorization.Text;
-            dataUser.HashPassword = hashingService.HashPassword(PasswordAuthorization.Password);
+            dataUserLogin.Login = LoginAuthorization.Text;
+            dataUserLogin.Password = PasswordAuthorization.Password;
 
             userManager.LoadUsers();
 
-            if (!userManager.UserIsRegistred(dataUser))
+            if (!userManager.UserIsRegistred(dataUserLogin))
             {
                 MessageBox.Show("The user is not registered or password was entered incorrectly", "Message");
                 return;

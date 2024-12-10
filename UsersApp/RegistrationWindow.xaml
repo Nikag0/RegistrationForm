@@ -18,7 +18,8 @@
                 <PasswordBox Name="PasswordRegistration" HorizontalAlignment="Center" materialDesign:HintAssist.Hint="Password"/>
                 <PasswordBox Name="RepPasswordRegistration" HorizontalAlignment="Center" materialDesign:HintAssist.Hint="  Repeat  " />
                 <TextBox Name="EmailRegistration" HorizontalAlignment="Center" materialDesign:HintAssist.Hint="Email" />
-                <Button  x:Name="SignUp" Click="ButtonClick" HorizontalAlignment="Center" Content="Sign up" Style="{StaticResource MaterialDesignFlatButton}"/>
+                <Button Name="ButtonSignUp" Click="ButtonSignUpClick" HorizontalAlignment="Center" Content="Sign up" Style="{StaticResource MaterialDesignFlatButton}"/>
+                <Button Name="ButtonBack" Click="ButtonBackClick" Content="Back" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignFlatButton}"/>
             </StackPanel>
         </Border>
     </Grid>

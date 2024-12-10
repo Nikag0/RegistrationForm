@@ -23,23 +23,23 @@ namespace UsersApp
 {
     public partial class RegistrationWindow : Window
     {
-        public RegistrationWindow()
+        public RegistrationWindow(UserManager userManager)
         {
             InitializeComponent();
+            userRegistrate = userManager;
         }
+        private UserManager userRegistrate;
 
-        private HashingService hashingService = new HashingService();
-
-        private DataUserRegistration dataUsersRegistration = new DataUserRegistration();
-
-        private void ButtonClick(object sender, RoutedEventArgs e)
+        private void ButtonSignUpClick(object sender, RoutedEventArgs e)
         {
+            DataUserPass dataUsersRegistration = new DataUserPass();
+
             dataUsersRegistration.Login = LoginRegistration.Text;
-            dataUsersRegistration.HashPassword = hashingService.HashPassword(PasswordRegistration.Password);
-            dataUsersRegistration.HashRepPassword = hashingService.HashPassword(RepPasswordRegistration.Password);
+            dataUsersRegistration.Password = PasswordRegistration.Password;
+            dataUsersRegistration.RepPassword = RepPasswordRegistration.Password;
             dataUsersRegistration.Email = EmailRegistration.Text;
 
-            int error = userManager.DataValitation(dataUsersRegistration);
+            int error = userRegistrate.DataValitation(dataUsersRegistration);
 
             switch (error)
             {
@@ -56,18 +56,25 @@ namespace UsersApp
                     MessageBox.Show("Email was entered incorrectly", "Message");
                     break;
             }
-
-            if (!userManager.AlreadyRegistred(dataUsersRegistration))
+            if (error == 0)
             {
-
-                MessageBox.Show("This login or email is already registered", "Message");
-                return;
-            }
-            else
-            {
-                MessageBox.Show("Registrations is done", "Message");
-                this.Close();
+                if (!userRegistrate.AlreadyRegistred(dataUsersRegistration))
+                {
+                    MessageBox.Show("This login or email is already registered", "Message");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Registrations is done", "Message");
+                    this.Close();
+                }
             }
         }
+
+        private void ButtonBackClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
