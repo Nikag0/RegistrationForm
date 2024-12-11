@@ -1,4 +1,4 @@
-﻿using MaterialDesignThemes.Wpf;
+﻿ using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -38,14 +38,14 @@ namespace UsersApp
 
         private void ButtonSignInClick(object sender, RoutedEventArgs e)
         {
-            DataUserPass dataUserLogin = new DataUserPass();
+            DataUserRegOrAuth dataUserAuthorization = new DataUserRegOrAuth();
 
-            dataUserLogin.Login = LoginAuthorization.Text;
-            dataUserLogin.Password = PasswordAuthorization.Password;
+            dataUserAuthorization.Login = LoginAuthorization.Text;
+            dataUserAuthorization.Password = PasswordAuthorization.Password;
 
             userManager.LoadUsers();
 
-            if (!userManager.UserIsRegistred(dataUserLogin))
+            if (!userManager.AuthorizationUser(dataUserAuthorization))
             {
                 MessageBox.Show("The user is not registered or password was entered incorrectly", "Message");
                 return;

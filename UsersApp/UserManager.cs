@@ -10,6 +10,7 @@ using System.Windows.Shapes;
 using System.Windows.Controls;
 using System.Xml.Linq;
 using System;
+using HashingService;
 
 namespace UsersApp
 {
@@ -20,8 +21,24 @@ namespace UsersApp
 
         private List<DataUser> dataUsersList = new List<DataUser>();
 
+        public int RegistrationUser(DataUserRegOrAuth dataUsersRegistration)
+        {
+            if (DataValitation(dataUsersRegistration) == 0)
+            {
+                if (IsUserRgistered(dataUsersRegistration))
+                {
+                    return 0;
+                }
+                else
+                {
+                    return 5;
+                }
+            }
+            else return DataValitation(dataUsersRegistration);
+        }
+
         // Валидация данных в окне регистрации.
-        public int DataValitation(DataUserPass dataUsersRegistration)
+        private int DataValitation(DataUserRegOrAuth dataUsersRegistration)
         {
             var patternEmail = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*@((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
             var patternPassword = new Regex(@"^(?=.{6,16}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*$");
@@ -31,7 +48,7 @@ namespace UsersApp
                 return 1;
             }
             if (!patternPassword.IsMatch(dataUsersRegistration.Password))
-            {
+            { 
                 return 2;
             }
             else if (dataUsersRegistration.Password != dataUsersRegistration.RepPassword)
@@ -46,7 +63,7 @@ namespace UsersApp
         }
 
         // Проверка в окне регистрации, существует ли пользователь с введёнными данными.
-        public bool AlreadyRegistred(DataUserPass dataUsersRegistration)
+        private bool IsUserRgistered(DataUserRegOrAuth dataUsersRegistration)
         {
             bool foundUser = dataUsersList.Any(user => user.Login == dataUsersRegistration.Login || user.Login == dataUsersRegistration.Login);
 
@@ -58,7 +75,7 @@ namespace UsersApp
             {
                 DataUser newuser = new DataUser();
                 newuser.Login = dataUsersRegistration.Login;
-                newuser.HashPassword = HashingService.HashPassword(dataUsersRegistration.Password);
+                newuser.HashPassword = HashingService.HashingService.HashPassword(dataUsersRegistration.Password);
                 newuser.Email = dataUsersRegistration.Email;
 
                 dataUsersList.Add(newuser);
@@ -68,9 +85,9 @@ namespace UsersApp
         }
 
         // Проверка в окне авторизации, существует ли пользователь с введёнными данными.
-        public bool UserIsRegistred(DataUserPass dataUserLogin)
+        public bool AuthorizationUser(DataUserRegOrAuth dataUserAuthorization)
         {
-            bool foundUser = dataUsersList.Any(user => user.Login == dataUserLogin.Login && user.HashPassword == HashingService.HashPassword(dataUserLogin.Password));
+            bool foundUser = dataUsersList.Any(user => user.Login == dataUserAuthorization.Login && user.HashPassword == HashingService.HashingService.HashPassword(dataUserAuthorization.Password));
 
             if (foundUser)
             {

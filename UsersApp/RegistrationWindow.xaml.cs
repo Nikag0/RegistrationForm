@@ -32,14 +32,14 @@ namespace UsersApp
 
         private void ButtonSignUpClick(object sender, RoutedEventArgs e)
         {
-            DataUserPass dataUsersRegistration = new DataUserPass();
+            DataUserRegOrAuth dataUsersRegistration = new DataUserRegOrAuth();
 
             dataUsersRegistration.Login = LoginRegistration.Text;
             dataUsersRegistration.Password = PasswordRegistration.Password;
             dataUsersRegistration.RepPassword = RepPasswordRegistration.Password;
             dataUsersRegistration.Email = EmailRegistration.Text;
 
-            int error = userRegistrate.DataValitation(dataUsersRegistration);
+            int error = userRegistrate.RegistrationUser(dataUsersRegistration);
 
             switch (error)
             {
@@ -55,19 +55,13 @@ namespace UsersApp
                 case 4:
                     MessageBox.Show("Email was entered incorrectly", "Message");
                     break;
-            }
-            if (error == 0)
-            {
-                if (!userRegistrate.AlreadyRegistred(dataUsersRegistration))
-                {
+                case 5:
                     MessageBox.Show("This login or email is already registered", "Message");
-                    return;
-                }
-                else
-                {
+                    break;
+                case 0:
                     MessageBox.Show("Registrations is done", "Message");
                     this.Close();
-                }
+                    break;
             }
         }
 
@@ -75,6 +69,5 @@ namespace UsersApp
         {
             this.Close();
         }
-
     }
 }
