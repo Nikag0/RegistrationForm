@@ -25,7 +25,7 @@ namespace UsersApp
         {
             if (DataValitation(dataUsersRegistration) == 0)
             {
-                if (IsUserRgistered(dataUsersRegistration))
+                if (CheckUserRgistered(dataUsersRegistration))
                 {
                     return 0;
                 }
@@ -63,7 +63,7 @@ namespace UsersApp
         }
 
         // Проверка в окне регистрации, существует ли пользователь с введёнными данными.
-        private bool IsUserRgistered(DataUserRegOrAuth dataUsersRegistration)
+        private bool CheckUserRgistered(DataUserRegOrAuth dataUsersRegistration)
         {
             bool foundUser = dataUsersList.Any(user => user.Login == dataUsersRegistration.Login || user.Login == dataUsersRegistration.Login);
 

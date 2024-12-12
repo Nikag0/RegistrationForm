@@ -28,7 +28,7 @@ namespace UsersApp
             InitializeComponent();
             userRegistrate = userManager;
         }
-        private UserManager userRegistrate;
+        private UserManager userRegistrate = new UserManager();
 
         private void ButtonSignUpClick(object sender, RoutedEventArgs e)
         {

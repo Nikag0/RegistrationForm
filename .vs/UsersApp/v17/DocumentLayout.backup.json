@@ -36,10 +36,9 @@
               "RelativeDocumentMoniker": "UsersApp\\DataUser.cs",
               "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\DataUser.cs",
               "RelativeToolTip": "UsersApp\\DataUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:28:03.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T08:28:03.811Z"
             },
             {
               "$type": "Document",
@@ -47,9 +46,9 @@
               "Title": "RegistrationWindow.xaml.cs",
               "DocumentMoniker": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\RegistrationWindow.xaml.cs",
               "RelativeDocumentMoniker": "UsersApp\\RegistrationWindow.xaml.cs",
-              "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\RegistrationWindow.xaml.cs*",
-              "RelativeToolTip": "UsersApp\\RegistrationWindow.xaml.cs*",
-              "ViewState": "AgIAACUAAAAAAAAAAAApwD0AAABIAAAAAAAAAA==",
+              "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\RegistrationWindow.xaml.cs",
+              "RelativeToolTip": "UsersApp\\RegistrationWindow.xaml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADgvx4AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T08:12:51.056Z",
               "EditorCaption": ""
@@ -62,7 +61,7 @@
               "RelativeDocumentMoniker": "UsersApp\\AuthorizationWindow.xaml.cs",
               "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\AuthorizationWindow.xaml.cs",
               "RelativeToolTip": "UsersApp\\AuthorizationWindow.xaml.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAQwCwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T08:12:50.205Z",
               "EditorCaption": ""
@@ -75,7 +74,7 @@
               "RelativeDocumentMoniker": "UsersApp\\UserManager.cs",
               "ToolTip": "D:\\VIisualStudio\\RegistrationForm\\UsersApp\\UserManager.cs",
               "RelativeToolTip": "UsersApp\\UserManager.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowFAAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T10:49:54.819Z",
               "EditorCaption": ""
