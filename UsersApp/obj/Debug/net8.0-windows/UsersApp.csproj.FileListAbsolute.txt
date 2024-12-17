@@ -85,3 +85,5 @@ D:\VIisualStudio\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\Authorizatio
 D:\VIisualStudio\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\RegistrationWindow.g.cs
 D:\VIisualStudio\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\AuthorizationWindow.baml
 D:\VIisualStudio\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\RegistrationWindow.baml
+D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\HashingService.dll
+D:\UserApp_Registration\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs

@@ -11,6 +11,7 @@ using System.Windows.Controls;
 using System.Xml.Linq;
 using System;
 using HashingService;
+using System.ComponentModel;
 
 namespace UsersApp
 {
@@ -23,7 +24,9 @@ namespace UsersApp
 
         public int RegistrationUser(DataUserRegOrAuth dataUsersRegistration)
         {
-            if (DataValitation(dataUsersRegistration) == 0)
+            int dataValidation = DataValitation(dataUsersRegistration);
+
+            if (dataValidation == 0)
             {
                 if (CheckUserRgistered(dataUsersRegistration))
                 {
@@ -34,20 +37,20 @@ namespace UsersApp
                     return 5;
                 }
             }
-            else return DataValitation(dataUsersRegistration);
+            return dataValidation;
         }
 
         // Валидация данных в окне регистрации.
         private int DataValitation(DataUserRegOrAuth dataUsersRegistration)
         {
-            var patternEmail = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*@((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
-            var patternPassword = new Regex(@"^(?=.{6,16}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*$");
+            string patternEmail = @"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*@((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$";
+            string patternPassword = @"^(?=.{6,16}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*$";
 
             if (dataUsersRegistration.Login.Length < 5)
             {
                 return 1;
             }
-            if (!patternPassword.IsMatch(dataUsersRegistration.Password))
+            if (!Regex.IsMatch(dataUsersRegistration.Password, patternPassword))
             { 
                 return 2;
             }
@@ -55,7 +58,7 @@ namespace UsersApp
             {
                 return 3;
             }
-            if (!patternEmail.IsMatch(dataUsersRegistration.Email))
+            if (!Regex.IsMatch(dataUsersRegistration.Email, patternEmail))
             {
                 return 4;
             }
@@ -65,38 +68,37 @@ namespace UsersApp
         // Проверка в окне регистрации, существует ли пользователь с введёнными данными.
         private bool CheckUserRgistered(DataUserRegOrAuth dataUsersRegistration)
         {
-            bool foundUser = dataUsersList.Any(user => user.Login == dataUsersRegistration.Login || user.Login == dataUsersRegistration.Login);
-
-            if (foundUser)
+            if (dataUsersList.Any(user => user.Login == dataUsersRegistration.Login || user.Email == dataUsersRegistration.Email))
             {
                 return false;
             }
-            else
-            {
-                DataUser newuser = new DataUser();
-                newuser.Login = dataUsersRegistration.Login;
-                newuser.HashPassword = HashingService.HashingService.HashPassword(dataUsersRegistration.Password);
-                newuser.Email = dataUsersRegistration.Email;
 
-                dataUsersList.Add(newuser);
-                SaveUsers();
-                return true;
-            }
+            DataUser newUser = new DataUser();
+            newUser.Login = dataUsersRegistration.Login;
+            newUser.HashPassword = HashingService.HashingService.HashPassword(dataUsersRegistration.Password);
+            newUser.Email = dataUsersRegistration.Email;
+
+            dataUsersList.Add(newUser);
+            SaveUsers();
+            return true;
         }
 
         // Проверка в окне авторизации, существует ли пользователь с введёнными данными.
         public bool AuthorizationUser(DataUserRegOrAuth dataUserAuthorization)
         {
-            bool foundUser = dataUsersList.Any(user => user.Login == dataUserAuthorization.Login && user.HashPassword == HashingService.HashingService.HashPassword(dataUserAuthorization.Password));
+            string hashPassword = HashingService.HashingService.HashPassword(dataUserAuthorization.Password);
 
-            if (foundUser)
-            {
-                return true;
+            // return dataUsersList.Any(user => user.Login == dataUserAuthorization.Login && user.HashPassword == hashPassword);
+
+            // поиск пользователя в листе, не используя Any.
+            foreach (DataUser user in dataUsersList)
+            { 
+                if (user.Login == dataUserAuthorization.Login && user.HashPassword == hashPassword)
+                {
+                    return true;
+                }
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
 
         public void SaveUsers()

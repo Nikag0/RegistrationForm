@@ -32,12 +32,10 @@ namespace UsersApp
 
         private void ButtonSignUpClick(object sender, RoutedEventArgs e)
         {
-            DataUserRegOrAuth dataUsersRegistration = new DataUserRegOrAuth();
+            DataUserRegOrAuth dataUsersRegistration = (DataUserRegOrAuth)this.Resources["dataUsersRegistrationXAML"];
 
-            dataUsersRegistration.Login = LoginRegistration.Text;
             dataUsersRegistration.Password = PasswordRegistration.Password;
             dataUsersRegistration.RepPassword = RepPasswordRegistration.Password;
-            dataUsersRegistration.Email = EmailRegistration.Text;
 
             int error = userRegistrate.RegistrationUser(dataUsersRegistration);
 

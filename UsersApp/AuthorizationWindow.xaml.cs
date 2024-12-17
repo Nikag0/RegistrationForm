@@ -17,12 +17,14 @@ using System.Windows.Shapes;
 using static MaterialDesignThemes.Wpf.Theme;
 using static System.Net.Mime.MediaTypeNames;
 using static UsersApp.RegistrationWindow;
+using static System.Windows.Data.Binding;
+using System.ComponentModel;
 
 namespace UsersApp
 {
     public partial class AuthorizationWindow : Window
     {
-        UserManager userManager = new UserManager();
+        private UserManager userManager = new UserManager();
      
         public AuthorizationWindow()
         {
@@ -34,25 +36,22 @@ namespace UsersApp
         {
             RegistrationWindow registrationWindow = new RegistrationWindow(userManager);
             registrationWindow.Show();
+
         }
 
         private void ButtonSignInClick(object sender, RoutedEventArgs e)
         {
-            DataUserRegOrAuth dataUserAuthorization = new DataUserRegOrAuth();
+            DataUserRegOrAuth dataUserAuthorization = (DataUserRegOrAuth)this.Resources["dataUserAuthorizationXAML"];
 
-            dataUserAuthorization.Login = LoginAuthorization.Text;
             dataUserAuthorization.Password = PasswordAuthorization.Password;
 
-            userManager.LoadUsers();
-
-            if (!userManager.AuthorizationUser(dataUserAuthorization))
+            if (userManager.AuthorizationUser(dataUserAuthorization))
             {
-                MessageBox.Show("The user is not registered or password was entered incorrectly", "Message");
-                return;
+                MessageBox.Show("login is successful", "Message");
             }
             else
             {
-                MessageBox.Show("login is successful", "Message");
+                MessageBox.Show("The user is not registered or password was entered incorrectly", "Message");
             }
         }
     }
