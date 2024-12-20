@@ -18,22 +18,24 @@ using System.Windows.Shapes;
 using static MaterialDesignThemes.Wpf.Theme;
 using static System.Net.Mime.MediaTypeNames;
 using static UsersApp.RegistrationWindow;
+using UserManager;
 
 namespace UsersApp
 {
     public partial class RegistrationWindow : Window
     {
-        public RegistrationWindow(UserManager userManager)
+        private DataUserRegOrAuth dataUsersRegistration = new DataUserRegOrAuth();
+        private UserManager.UserManager userRegistrate = new UserManager.UserManager();
+
+        public RegistrationWindow(UserManager.UserManager userManager)
         {
             InitializeComponent();
+            this.DataContext = dataUsersRegistration;
             userRegistrate = userManager;
         }
-        private UserManager userRegistrate = new UserManager();
 
         private void ButtonSignUpClick(object sender, RoutedEventArgs e)
         {
-            DataUserRegOrAuth dataUsersRegistration = (DataUserRegOrAuth)this.Resources["dataUsersRegistrationXAML"];
-
             dataUsersRegistration.Password = PasswordRegistration.Password;
             dataUsersRegistration.RepPassword = RepPasswordRegistration.Password;
 

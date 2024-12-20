@@ -4,16 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows;
-using System.IO;
-using System.Windows.Shapes;
-using System.Windows.Controls;
-using System.Xml.Linq;
-using System;
 using HashingService;
-using System.ComponentModel;
-
-namespace UsersApp
+namespace UserManager
 {
     public class UserManager
     {
@@ -26,16 +18,9 @@ namespace UsersApp
         {
             int dataValidation = DataValitation(dataUsersRegistration);
 
-            if (dataValidation == 0)
+            if (dataValidation == 0 && !CheckUserRgistered(dataUsersRegistration))
             {
-                if (CheckUserRgistered(dataUsersRegistration))
-                {
-                    return 0;
-                }
-                else
-                {
-                    return 5;
-                }
+                return 5;
             }
             return dataValidation;
         }
@@ -51,7 +36,7 @@ namespace UsersApp
                 return 1;
             }
             if (!Regex.IsMatch(dataUsersRegistration.Password, patternPassword))
-            { 
+            {
                 return 2;
             }
             else if (dataUsersRegistration.Password != dataUsersRegistration.RepPassword)
@@ -92,7 +77,7 @@ namespace UsersApp
 
             // поиск пользователя в листе, не используя Any.
             foreach (DataUser user in dataUsersList)
-            { 
+            {
                 if (user.Login == dataUserAuthorization.Login && user.HashPassword == hashPassword)
                 {
                     return true;
@@ -115,7 +100,6 @@ namespace UsersApp
 
         public void LoadUsers()
         {
-            dataUsersList.Clear();
             string[] dataString = File.ReadAllLines(Path);
 
             foreach (string str in dataString)

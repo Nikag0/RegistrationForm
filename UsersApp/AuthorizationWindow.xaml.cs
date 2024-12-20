@@ -19,16 +19,22 @@ using static System.Net.Mime.MediaTypeNames;
 using static UsersApp.RegistrationWindow;
 using static System.Windows.Data.Binding;
 using System.ComponentModel;
+using System.Windows.Threading;
+using UserManager;
 
 namespace UsersApp
 {
     public partial class AuthorizationWindow : Window
     {
-        private UserManager userManager = new UserManager();
-     
+        private UserManager.UserManager userManager = new UserManager.UserManager();
+        private DataUserRegOrAuth dataUserAuthorization = new DataUserRegOrAuth();
+        private DispatcherTimer timer;
+        private int timerNum = 0;
+
         public AuthorizationWindow()
         {
             InitializeComponent();
+            this.DataContext = dataUserAuthorization;
             userManager.LoadUsers();
         }
 
@@ -36,13 +42,9 @@ namespace UsersApp
         {
             RegistrationWindow registrationWindow = new RegistrationWindow(userManager);
             registrationWindow.Show();
-
         }
-
         private void ButtonSignInClick(object sender, RoutedEventArgs e)
         {
-            DataUserRegOrAuth dataUserAuthorization = (DataUserRegOrAuth)this.Resources["dataUserAuthorizationXAML"];
-
             dataUserAuthorization.Password = PasswordAuthorization.Password;
 
             if (userManager.AuthorizationUser(dataUserAuthorization))
@@ -53,6 +55,43 @@ namespace UsersApp
             {
                 MessageBox.Show("The user is not registered or password was entered incorrectly", "Message");
             }
+        }
+
+        private void ButtonTimer(object sender, RoutedEventArgs e)
+        {
+            if (timerNum == 0)
+            {
+                timer = new DispatcherTimer();
+                timer.Interval = TimeSpan.FromSeconds(1);
+                timer.Tick += Timer_Tick;
+                timer.Start();
+                StartTimer.Content = "Stop timer";
+            }
+            else
+            {
+                timerNum = 0;
+                timer.Stop();
+                StartTimer.Content = "Reset and start timer";
+            }
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            timerNum++;
+            Timer.Text = timerNum.ToString();
+        }
+
+        private void CheckBoxAuthorizationOn(object sender, RoutedEventArgs e)
+        {
+            LoginAuthorization.Text = "Stop Authorization";
+            LoginAuthorization.IsEnabled = false;
+            PasswordAuthorization.IsEnabled = false;
+        }
+
+        private void CheckBoxAuthorizationOff(object sender, RoutedEventArgs e)
+        {
+            LoginAuthorization.Text = "";
+            LoginAuthorization.IsEnabled = true;
+            PasswordAuthorization.IsEnabled = true;
         }
     }
 }

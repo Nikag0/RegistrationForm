@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Diagnostics;
 
-namespace UsersApp
+namespace UserManager
 {
     public class DataUser : INotifyPropertyChanged
     {
@@ -30,7 +27,7 @@ namespace UsersApp
         public string HashPassword { get => hashPassword; set => hashPassword = value; }
         public string Email
         {
-            get => email; 
+            get => email;
             set
             {
                 email = value;
@@ -46,4 +43,3 @@ namespace UsersApp
         }
     }
 }
- 
