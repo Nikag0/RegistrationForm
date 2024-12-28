@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace UserManager
 {
@@ -20,7 +16,7 @@ namespace UserManager
             set
             {
                 login = value;
-                OnPropertyChanged("Login");
+                OnPropertyChanged();
             }
         }
 
@@ -31,7 +27,7 @@ namespace UserManager
             set
             {
                 email = value;
-                OnPropertyChanged("Email");
+                OnPropertyChanged();
             }
         }
 
