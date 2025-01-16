@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\UserApp_Registration\\RegistrationForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\userapp_registration\\registrationform\\usersapp\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\userapp_registration\\registrationform\\usersapp\\yesnotobooleanconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\yesnotobooleanconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\userapp_registration\\registrationform\\usersapp\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\userapp_registration\\registrationform\\usersapp\\viewmodelauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ViewModelAuthorization.cs",
               "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\ViewModelAuthorization.cs",
               "RelativeDocumentMoniker": "UsersApp\\ViewModelAuthorization.cs",
@@ -43,38 +35,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Authorization.xaml.cs",
-              "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\Authorization.xaml.cs",
-              "RelativeDocumentMoniker": "UsersApp\\Authorization.xaml.cs",
-              "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\Authorization.xaml.cs",
-              "RelativeToolTip": "UsersApp\\Authorization.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T09:20:34.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Authorization.xaml",
-              "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\Authorization.xaml",
-              "RelativeDocumentMoniker": "UsersApp\\Authorization.xaml",
-              "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\Authorization.xaml*",
-              "RelativeToolTip": "UsersApp\\Authorization.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-14T09:00:24.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "YesNoToBooleanConverter.cs",
               "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\YesNoToBooleanConverter.cs",
               "RelativeDocumentMoniker": "UsersApp\\YesNoToBooleanConverter.cs",
               "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\YesNoToBooleanConverter.cs",
               "RelativeToolTip": "UsersApp\\YesNoToBooleanConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-16T08:26:35.333Z",
               "EditorCaption": ""

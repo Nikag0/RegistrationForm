@@ -1,0 +1,16 @@
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\obj\Debug\net8.0\UsercСhanges.csproj.AssemblyReference.cache
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\obj\Debug\net8.0\UsercСhanges.GeneratedMSBuildEditorConfig.editorconfig
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\obj\Debug\net8.0\UsercСhanges.AssemblyInfoInputs.cache
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\obj\Debug\net8.0\UsercСhanges.AssemblyInfo.cs
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\obj\Debug\net8.0\UsercСhanges.csproj.CoreCompileInputs.cache
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\obj\Debug\net8.0\UsercСhanges.sourcelink.json
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\bin\Debug\net8.0\UsercСhanges.deps.json
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\bin\Debug\net8.0\UsercСhanges.dll
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\bin\Debug\net8.0\UsercСhanges.pdb
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\bin\Debug\net8.0\HashingService.dll
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\bin\Debug\net8.0\HashingService.pdb
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\obj\Debug\net8.0\Userc_ha.CB02AC9B.Up2Date
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\obj\Debug\net8.0\UsercСhanges.dll
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\obj\Debug\net8.0\refint\UsercСhanges.dll
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\obj\Debug\net8.0\UsercСhanges.pdb
+D:\UserApp_Registration\RegistrationForm\UsercСhanges\obj\Debug\net8.0\ref\UsercСhanges.dll
