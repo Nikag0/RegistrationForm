@@ -7,7 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Authorization.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="AuthorizationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Registration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="RegistrationWindow.xaml.cs">
@@ -15,7 +21,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Authorization.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="AuthorizationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Registration.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RegistrationWindow.xaml">

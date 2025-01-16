@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\UserApp_Registration\RegistrationForm\UsersApp\App.xaml
-2402521920
+41295175914
 
-8-2081509617
-203-831744204
-AuthorizationWindow.xaml;RegistrationWindow.xaml;
+12-569454313
+200-1871554715
+Authorization.xaml;AuthorizationWindow.xaml;Registration.xaml;RegistrationWindow.xaml;
 
 True
 

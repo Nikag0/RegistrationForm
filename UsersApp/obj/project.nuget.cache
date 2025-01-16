@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "od1phTEiIZY=",
+  "dgSpecHash": "sBRyur1idXw=",
   "success": true,
   "projectFilePath": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\UsersApp.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Пользователь\\.nuget\\packages\\materialdesigncolors\\3.1.0\\materialdesigncolors.3.1.0.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\materialdesignthemes\\5.1.0\\materialdesignthemes.5.1.0.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

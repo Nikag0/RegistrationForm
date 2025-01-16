@@ -56,9 +56,6 @@ D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\Users
 D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\UsersApp.runtimeconfig.json
 D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\UsersApp.dll
 D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\UsersApp.pdb
-D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\MaterialDesignColors.dll
-D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
-D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
 D:\UserApp_Registration\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\UsersApp.csproj.AssemblyReference.cache
 D:\UserApp_Registration\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\App.g.cs
 D:\UserApp_Registration\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\UsersApp_MarkupCompile.cache
@@ -86,6 +83,11 @@ D:\VIisualStudio\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\Registration
 D:\VIisualStudio\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\AuthorizationWindow.baml
 D:\VIisualStudio\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\RegistrationWindow.baml
 D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\HashingService.dll
-D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\UserManager.dll
-D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\UserManager.pdb
+D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\HashingService.pdb
+D:\UserApp_Registration\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\Authorization.g.cs
 D:\UserApp_Registration\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\UsercСhanges.dll
+D:\UserApp_Registration\RegistrationForm\UsersApp\bin\Debug\net8.0-windows\UsercСhanges.pdb
+D:\UserApp_Registration\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\Authorization.baml
+D:\UserApp_Registration\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\Registration.g.cs
+D:\UserApp_Registration\RegistrationForm\UsersApp\obj\Debug\net8.0-windows\Registration.baml

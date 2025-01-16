@@ -9,17 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\UserManager\UserManager.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="HashingService">
-      <HintPath>..\lib\HashingService\bin\Debug\net8.0\HashingService.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\HashingService\HashingService.csproj" />
+    <ProjectReference Include="..\UsercСhanges\UsercСhanges.csproj" />
   </ItemGroup>
 
 </Project>
