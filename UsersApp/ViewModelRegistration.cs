@@ -1,62 +1,28 @@
-﻿using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using UsercСhanges;
+﻿using UsercСhanges;
 using System.Windows.Input;
 using System.Windows;
+using System.Collections.ObjectModel;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace UsersApp
 {
-    public class ViewModelRegistration : INotifyPropertyChanged
+    public class ViewModelRegistration
     {
         private DataUserRegOrAuth dataUsersRegistration = new DataUserRegOrAuth();
         private UserManager userRegistrate = new UserManager();
-
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public ViewModelRegistration(UserManager userManager)
         {
             this.userRegistrate = userManager;
         }
 
-        // Правильно ли переносить INotifyPropertyChanged во вьюмодель?
-        public string Login
+        public DataUserRegOrAuth DataUsersRegistration
         {
-            get => dataUsersRegistration.Login;
+            get => dataUsersRegistration;
             set
             {
-                dataUsersRegistration.Login = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string Password
-        {
-            get => dataUsersRegistration.Password;
-            set
-            {
-                dataUsersRegistration.Password = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string RepPassword
-        {
-            get => dataUsersRegistration.RepPassword;
-            set
-            {
-                dataUsersRegistration.RepPassword = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string Email
-        {
-            get => dataUsersRegistration.Email;
-            set
-            {
-                dataUsersRegistration.Email = value;
-                OnPropertyChanged();
+                dataUsersRegistration = value;
             }
         }
 
@@ -89,15 +55,10 @@ namespace UsersApp
                             MessageBox.Show("Registrations is done", "Message");
                             //this.Close();
                             break;
+
                     }
                 });
             }
-        }
-
-        public void OnPropertyChanged([CallerMemberName] string prop = "")
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
     }
 }

@@ -18,26 +18,29 @@
             </Border.Effect>
             <StackPanel>
 
-                <CheckBox x:Name="Check" Command="{Binding IsEnable}" IsChecked="{Binding ElementName=txtValue, Path=Text, Converter={StaticResource YesNoToBooleanConverter}}" Content="Go Authorization" HorizontalAlignment="Left"/>
+                <CheckBox x:Name="Check" HorizontalAlignment="Left" Content="Go Authorization"
+                          IsChecked="{Binding ElementName=txtValue, Path=Text, Converter={StaticResource YesNoToBooleanConverter}}" 
+                />
 
                 <Button Command="{Binding Timer}" Content="{Binding TimetButtonText}" HorizontalAlignment="Right" />
                 <TextBlock Text="{Binding TimerNum}" HorizontalAlignment="Right" Width="80"/>
                 <TextBlock Margin="0 10" HorizontalAlignment="Center" Text="Authorization" FontSize="20" FontWeight="Bold"/>
-                <TextBox Text="{Binding Login, Mode=OneWayToSource}"  HorizontalAlignment="Center" Width="124">
+
+                <TextBox Text="{Binding DataUserAuthorization.Login, Mode=OneWayToSource}"  HorizontalAlignment="Center" Width="124">
                     <TextBox.Style>
                         <Style TargetType="TextBox">
                             <Setter Property="Text" Value="Stop Authorizatiom" />
                             <Setter Property="IsEnabled" Value="False" />
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding ElementName=Check, Path=IsChecked}" Value="True">
-                                    <Setter Property="Text" Value="" />
                                     <Setter Property="IsEnabled" Value="True" />
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
                     </TextBox.Style>
                 </TextBox>
-                <TextBox Text="{Binding Password}" IsEnabled="{Binding ElementName=Check, Path=IsChecked, Mode=OneWay}" HorizontalAlignment="Center" Width="124" />
+
+                <TextBox Text="{Binding DataUserAuthorization.Password}" IsEnabled="{Binding ElementName=Check, Path=IsChecked, Mode=OneWay}" HorizontalAlignment="Center" Width="124" />
                 <TextBox x:Name="txtValue"  HorizontalAlignment="Center" Width="124" />
                 <!--<PasswordBox Name="PasswordAuthorization" IsEnabled="{Binding InputAccess}" HorizontalAlignment="Center"/>-->
                 <Grid>

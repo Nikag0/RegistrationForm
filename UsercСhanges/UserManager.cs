@@ -1,12 +1,16 @@
-﻿using System.Text.RegularExpressions;
-
+﻿using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
+using Microsoft.EntityFrameworkCore;
 
 namespace UsercСhanges
 {
     public class UserManager
     {
+        ApplicationContext db = new ApplicationContext();
         private string path = "Data.txt";
         public string Path { get => path; set => path = value; }
+        public ObservableCollection<DataUser> dataUsersSQLite { get; set; }
+
         private List<DataUser> dataUsersList = new List<DataUser>();
 
         public int RegistrationUser(DataUserRegOrAuth dataUsersRegistration)
@@ -58,6 +62,10 @@ namespace UsercСhanges
             newUser.HashPassword = HashingService.HashingService.HashPassword(dataUsersRegistration.Password);
             newUser.Email = dataUsersRegistration.Email;
 
+            //Сохранение в SQLite.
+            db.dataUsersSQLite.Add(newUser);
+            db.SaveChanges();
+
             dataUsersList.Add(newUser);
             SaveUsers();
             return true;
@@ -95,6 +103,11 @@ namespace UsercСhanges
 
         public void LoadUsers()
         {
+            // Загрузка SQLite.
+            db.Database.EnsureCreated();
+            db.dataUsersSQLite.Load();
+            dataUsersSQLite = db.dataUsersSQLite.Local.ToObservableCollection();
+
             string[] dataString = File.ReadAllLines(Path);
 
             foreach (string str in dataString)

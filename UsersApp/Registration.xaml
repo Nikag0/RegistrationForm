@@ -13,10 +13,10 @@
             </Border.Effect>
             <StackPanel>
                 <TextBlock Text="Registration" Margin="0 10" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
-                <TextBox Text="{Binding Login}" HorizontalAlignment="Center"/>
-                <TextBox Text="{Binding Password}" HorizontalAlignment="Center"/>
-                <TextBox Text="{Binding RepPassword}" HorizontalAlignment="Center"/>
-                <TextBox Text="{Binding Email}" HorizontalAlignment="Center" />
+                <TextBox Text="{Binding DataUsersRegistration.Login}" HorizontalAlignment="Center"/>
+                <TextBox Text="{Binding DataUsersRegistration.Password}" HorizontalAlignment="Center"/>
+                <TextBox Text="{Binding DataUsersRegistration.RepPassword}" HorizontalAlignment="Center"/>
+                <TextBox Text="{Binding DataUsersRegistration.Email}" HorizontalAlignment="Center" />
                 <Button Name="ButtonSignUp" Command="{Binding ButtonSignUpClick}" HorizontalAlignment="Center" Content="Sign up"/>
                 <!--<Button Name="ButtonBack" Click="ButtonBackClick" Content="Back" HorizontalAlignment="Center"/>-->
             </StackPanel>

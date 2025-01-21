@@ -11,10 +11,5 @@ namespace UsersApp
             ViewModelRegistration viewModelRegistrationWindow = new ViewModelRegistration(userManager);
             this.DataContext = viewModelRegistrationWindow;
         }
-
-        //private void ButtonBackClick(object sender, RoutedEventArgs e)
-        //{
-        //    this.Close();
-        //}
     }
 }

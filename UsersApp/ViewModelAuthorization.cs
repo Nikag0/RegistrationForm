@@ -22,23 +22,12 @@ namespace UsersApp
             userManager.LoadUsers();
         }
 
-        public string Login
+        public DataUserRegOrAuth DataUserAuthorization
         {
-            get => dataUserAuthorization.Login;
+            get => dataUserAuthorization;
             set
             {
-                dataUserAuthorization.Login = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string Password
-        {
-            get => dataUserAuthorization.Password;
-            set
-            {
-                dataUserAuthorization.Password = value;
-                OnPropertyChanged();
+                dataUserAuthorization = value;
             }
         }
 

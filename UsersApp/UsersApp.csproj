@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\HashingService\HashingService.csproj" />
     <ProjectReference Include="..\UsercСhanges\UsercСhanges.csproj" />
   </ItemGroup>
