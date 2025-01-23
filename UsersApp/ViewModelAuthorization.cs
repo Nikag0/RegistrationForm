@@ -9,7 +9,7 @@ namespace UsersApp
 {
     public class ViewModelAuthorization : INotifyPropertyChanged
     {
-        private UserManager userManager= new UserManager();
+        private UserManagerSQLite userManager = new UserManagerSQLite();
         private DataUserRegOrAuth dataUserAuthorization = new DataUserRegOrAuth();
 
         DispatcherTimer timer = new DispatcherTimer();

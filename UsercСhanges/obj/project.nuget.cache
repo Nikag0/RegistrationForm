@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "H23C24wcGEs=",
+  "dgSpecHash": "QEXnf89mHbM=",
   "success": true,
   "projectFilePath": "D:\\UserApp_Registration\\RegistrationForm\\UsercСhanges\\UsercСhanges.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.data.sqlite\\9.0.1\\microsoft.data.sqlite.9.0.1.nupkg.sha512",
     "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.1\\microsoft.data.sqlite.core.9.0.1.nupkg.sha512",
     "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.1\\microsoft.entityframeworkcore.9.0.1.nupkg.sha512",
     "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.1\\microsoft.entityframeworkcore.abstractions.9.0.1.nupkg.sha512",

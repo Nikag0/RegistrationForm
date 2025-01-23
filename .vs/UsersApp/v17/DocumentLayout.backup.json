@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "D:\\UserApp_Registration\\RegistrationForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{923A9091-4AEB-453B-AD50-E260946CACB1}|Userc\u0421hanges\\Userc\u0421hanges.csproj|d:\\userapp_registration\\registrationform\\userc\u0441hanges\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{923A9091-4AEB-453B-AD50-E260946CACB1}|Userc\u0421hanges\\Userc\u0421hanges.csproj|solutionrelative:userc\u0441hanges\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\userapp_registration\\registrationform\\usersapp\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{923A9091-4AEB-453B-AD50-E260946CACB1}|Userc\u0421hanges\\Userc\u0421hanges.csproj|d:\\userapp_registration\\registrationform\\userc\u0441hanges\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{923A9091-4AEB-453B-AD50-E260946CACB1}|Userc\u0421hanges\\Userc\u0421hanges.csproj|solutionrelative:userc\u0441hanges\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\userapp_registration\\registrationform\\usersapp\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\userapp_registration\\registrationform\\usersapp\\delegatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\delegatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\userapp_registration\\registrationform\\usersapp\\viewmodelauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\viewmodelauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{923A9091-4AEB-453B-AD50-E260946CACB1}|Userc\u0421hanges\\Userc\u0421hanges.csproj|d:\\userapp_registration\\registrationform\\userc\u0441hanges\\usermanagersqlite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{923A9091-4AEB-453B-AD50-E260946CACB1}|Userc\u0421hanges\\Userc\u0421hanges.csproj|solutionrelative:userc\u0441hanges\\usermanagersqlite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{923A9091-4AEB-453B-AD50-E260946CACB1}|Userc\u0421hanges\\Userc\u0421hanges.csproj|d:\\userapp_registration\\registrationform\\userc\u0441hanges\\datauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{923A9091-4AEB-453B-AD50-E260946CACB1}|Userc\u0421hanges\\Userc\u0421hanges.csproj|solutionrelative:userc\u0441hanges\\datauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\userapp_registration\\registrationform\\usersapp\\registrationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\registrationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\userapp_registration\\registrationform\\usersapp\\viewmodelregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\viewmodelregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|d:\\userapp_registration\\registrationform\\usersapp\\viewmodelauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFC04EE5-470B-442E-B92C-20A678B839E3}|UsersApp\\UsersApp.csproj|solutionrelative:usersapp\\viewmodelauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{923A9091-4AEB-453B-AD50-E260946CACB1}|Userc\u0421hanges\\Userc\u0421hanges.csproj|d:\\userapp_registration\\registrationform\\userc\u0441hanges\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{923A9091-4AEB-453B-AD50-E260946CACB1}|Userc\u0421hanges\\Userc\u0421hanges.csproj|solutionrelative:userc\u0441hanges\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,80 +46,105 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DelegateCommand.cs",
-              "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\DelegateCommand.cs",
-              "RelativeDocumentMoniker": "UsersApp\\DelegateCommand.cs",
-              "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\DelegateCommand.cs",
-              "RelativeToolTip": "UsersApp\\DelegateCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Authorization.xaml.cs",
+              "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\Authorization.xaml.cs",
+              "RelativeDocumentMoniker": "UsersApp\\Authorization.xaml.cs",
+              "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\Authorization.xaml.cs",
+              "RelativeToolTip": "UsersApp\\Authorization.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T08:36:41.927Z",
+              "WhenOpened": "2025-01-23T07:54:30.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataUser.cs",
-              "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\Userc\u0421hanges\\DataUser.cs",
-              "RelativeDocumentMoniker": "Userc\u0421hanges\\DataUser.cs",
-              "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\Userc\u0421hanges\\DataUser.cs",
-              "RelativeToolTip": "Userc\u0421hanges\\DataUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T10:59:41.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "UserManager.cs",
               "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\Userc\u0421hanges\\UserManager.cs",
               "RelativeDocumentMoniker": "Userc\u0421hanges\\UserManager.cs",
               "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\Userc\u0421hanges\\UserManager.cs",
               "RelativeToolTip": "Userc\u0421hanges\\UserManager.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAIA8wGsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T10:55:09.718Z",
+              "WhenOpened": "2025-01-23T07:27:58.934Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationContext.cs",
-              "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\Userc\u0421hanges\\ApplicationContext.cs",
-              "RelativeDocumentMoniker": "Userc\u0421hanges\\ApplicationContext.cs",
-              "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\Userc\u0421hanges\\ApplicationContext.cs",
-              "RelativeToolTip": "Userc\u0421hanges\\ApplicationContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T10:51:00.9Z",
+              "DocumentIndex": 0,
+              "Title": "Authorization.xaml",
+              "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\Authorization.xaml",
+              "RelativeDocumentMoniker": "UsersApp\\Authorization.xaml",
+              "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\Authorization.xaml*",
+              "RelativeToolTip": "UsersApp\\Authorization.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-23T07:26:52.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "DataUser.cs",
+              "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\Userc\u0421hanges\\DataUser.cs",
+              "RelativeDocumentMoniker": "Userc\u0421hanges\\DataUser.cs",
+              "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\Userc\u0421hanges\\DataUser.cs",
+              "RelativeToolTip": "Userc\u0421hanges\\DataUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T07:21:14.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserManagerSQLite.cs",
+              "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\Userc\u0421hanges\\UserManagerSQLite.cs",
+              "RelativeDocumentMoniker": "Userc\u0421hanges\\UserManagerSQLite.cs",
+              "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\Userc\u0421hanges\\UserManagerSQLite.cs",
+              "RelativeToolTip": "Userc\u0421hanges\\UserManagerSQLite.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAwFoAAAC9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T09:55:35.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ViewModelRegistration.cs",
               "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\ViewModelRegistration.cs",
               "RelativeDocumentMoniker": "UsersApp\\ViewModelRegistration.cs",
               "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\ViewModelRegistration.cs",
               "RelativeToolTip": "UsersApp\\ViewModelRegistration.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T10:09:02.794Z",
+              "WhenOpened": "2025-01-22T09:54:52.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "ViewModelAuthorization.cs",
               "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\ViewModelAuthorization.cs",
               "RelativeDocumentMoniker": "UsersApp\\ViewModelAuthorization.cs",
               "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\ViewModelAuthorization.cs",
               "RelativeToolTip": "UsersApp\\ViewModelAuthorization.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwGIAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T09:58:01.443Z",
+              "WhenOpened": "2025-01-22T09:54:36.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegistrationWindow.xaml.cs",
+              "DocumentMoniker": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\RegistrationWindow.xaml.cs",
+              "RelativeDocumentMoniker": "UsersApp\\RegistrationWindow.xaml.cs",
+              "ToolTip": "D:\\UserApp_Registration\\RegistrationForm\\UsersApp\\RegistrationWindow.xaml.cs",
+              "RelativeToolTip": "UsersApp\\RegistrationWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T09:54:23.543Z",
               "EditorCaption": ""
             }
           ]

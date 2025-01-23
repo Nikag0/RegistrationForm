@@ -9,10 +9,18 @@
       "UsercСhanges/1.0.0": {
         "dependencies": {
           "HashingService": "1.0.0",
+          "Microsoft.Data.Sqlite": "9.0.1",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.1"
         },
         "runtime": {
           "UsercСhanges.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/9.0.1": {
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "9.0.1",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.10",
+          "SQLitePCLRaw.core": "2.1.10"
         }
       },
       "Microsoft.Data.Sqlite.Core/9.0.1": {
@@ -395,6 +403,9 @@
         }
       },
       "HashingService/1.0.0": {
+        "dependencies": {
+          "Microsoft.Data.Sqlite": "9.0.1"
+        },
         "runtime": {
           "HashingService.dll": {
             "assemblyVersion": "1.0.0",
@@ -409,6 +420,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.Data.Sqlite/9.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9QC3t5ye9eA4y2oX1HR7Dq/dyAIGfQkNWnjy6+IBRCtHibh7zIq2etv8jvYHXMJRy+pbwtD3EVtvnpxfuiYVRA==",
+      "path": "microsoft.data.sqlite/9.0.1",
+      "hashPath": "microsoft.data.sqlite.9.0.1.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/9.0.1": {
       "type": "package",

@@ -10,9 +10,9 @@ namespace UsersApp
     public class ViewModelRegistration
     {
         private DataUserRegOrAuth dataUsersRegistration = new DataUserRegOrAuth();
-        private UserManager userRegistrate = new UserManager();
+        private UserManagerSQLite userRegistrate = new UserManagerSQLite();
 
-        public ViewModelRegistration(UserManager userManager)
+        public ViewModelRegistration(UserManagerSQLite userManager)
         {
             this.userRegistrate = userManager;
         }
