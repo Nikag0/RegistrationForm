@@ -4,16 +4,19 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace UsercСhanges
 {
     public class UserManagerSQLite
     {
         ApplicationContext db = new ApplicationContext();
-        public ObservableCollection<DataUser> DataUsersSQLite { get; set; }
+
+        public List<DataUser> DataUsersList = new List<DataUser>();
 
         public int RegistrationUser(DataUserRegOrAuth dataUsersRegistration)
         {
@@ -56,7 +59,7 @@ namespace UsercСhanges
         {
             string login = $"SELECT * FROM DataUsersSQLite WHERE Login= '{dataUsersRegistration.Login}'";
 
-            using var connection = new SqliteConnection("Data Source=helloapp.db");
+            using SqliteConnection connection = new SqliteConnection("Data Source=helloapp.db");
             connection.Open();
             SqliteCommand command = new SqliteCommand(login, connection);
             command.CommandText = login;
@@ -73,7 +76,7 @@ namespace UsercСhanges
             newUser.Email = dataUsersRegistration.Email;
 
             //Сохранение в SQLite.
-            db.DataUsersSQLite.Add(newUser);
+            db.dataUsersSQLite.Add(newUser);
             db.SaveChanges();
             return true;
         }
@@ -83,7 +86,7 @@ namespace UsercСhanges
         {
             string loginAndHashPassword = $"SELECT * FROM DataUsersSQLite WHERE Login= '{dataUserAuthorization.Login}'AND HashPassword = '{HashingService.HashingService.HashPassword(dataUserAuthorization.Password)}'";
 
-            using var connection = new SqliteConnection("Data Source=helloapp.db");
+            using SqliteConnection connection = new SqliteConnection("Data Source=helloapp.db");
             connection.Open();
             SqliteCommand command = new SqliteCommand(loginAndHashPassword, connection);
             command.CommandText = loginAndHashPassword;
@@ -96,12 +99,41 @@ namespace UsercСhanges
             }
             return false;
         }
-    
+
+        public void SerializeXML()
+        {
+            XmlSerializer xml = new XmlSerializer(typeof(DbSet<DataUser>));
+
+            using (FileStream fs = new FileStream("Users.xml", FileMode.OpenOrCreate))
+            xml.Serialize(fs, db.dataUsersSQLite);
+        }
+        public void SerializeBinary()
+        {
+            #pragma warning disable SYSLIB0011 // Тип или член устарел
+            BinaryFormatter formatter = new BinaryFormatter();
+            #pragma warning restore SYSLIB0011 // Тип или член устарел
+
+            using (FileStream fs = new FileStream("UsersBin.dat", FileMode.OpenOrCreate))
+            formatter.Serialize(fs, DataUsersList);
+        }
+
+        public void PasToHash()
+        {
+            using SqliteConnection users = new SqliteConnection("Data Source=helloapp.db");
+            DataUsersList =  db.dataUsersSQLite.ToList();
+            foreach (DataUser u in DataUsersList)
+            {
+                u.HashPassword = HashingService.HashingService.HashPassword(u.Password);
+            }
+            //Сохранение в SQLite.
+            db.SaveChanges();
+        }
+
         public void LoadUsers()
         {
-            db.Database.EnsureCreated();
-            db.DataUsersSQLite.Load();
-            DataUsersSQLite = db.DataUsersSQLite.Local.ToObservableCollection();
+            // db.Database.EnsureCreated();
+            db.dataUsersSQLite.Load();
+            DataUsersList = db.dataUsersSQLite.ToList();
         }
     }
 }

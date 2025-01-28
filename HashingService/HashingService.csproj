@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="HashingService">
       <HintPath>..\..\..\VIisualStudio\RegistrationForm\HashingService.dll</HintPath>
     </Reference>

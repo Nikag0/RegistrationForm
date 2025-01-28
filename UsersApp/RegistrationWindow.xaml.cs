@@ -5,6 +5,7 @@ namespace UsersApp
 {
     public partial class RegistrationWindow : Window
     {
+        //public RegistrationWindow(UserManager userManager)
         public RegistrationWindow(UserManagerSQLite userManager)
         {
             InitializeComponent();

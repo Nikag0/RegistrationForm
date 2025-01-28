@@ -52,6 +52,7 @@
                 <Grid>
                     <Button Name="ButtonCreateAccount" Command="{Binding ButtonCreateAccountClick}" HorizontalAlignment="Left" Content="Create account"/>
                     <Button Name="ButtonSignIn" Command="{Binding ButtonSignInClick}" HorizontalAlignment="Right" Content="Sign in"/>
+                    <Button Command="{Binding ButtonSerialize}" HorizontalAlignment="Left" Content="Serialize" Margin="0,-37,0,37"/>
                 </Grid>
             </StackPanel>
         </Border>

@@ -3,12 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace UsercСhanges
 {
+    [Serializable]
     public class DataUser : INotifyPropertyChanged
     {
+        private string password = "";
         private string login = "";
         private string hashPassword = "";
         private string email = "";
 
+        public string Password
+        {
+            get => password;
+            set
+            {
+                password = value;
+                OnPropertyChanged();
+            }
+        }
         public int Id { get; set; }
         public string Login
         {

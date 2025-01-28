@@ -403,9 +403,6 @@
         }
       },
       "HashingService/1.0.0": {
-        "dependencies": {
-          "Microsoft.Data.Sqlite": "9.0.1"
-        },
         "runtime": {
           "HashingService.dll": {
             "assemblyVersion": "1.0.0",

@@ -3,6 +3,8 @@ using System.Windows.Input;
 using System.Windows;
 using System.Collections.ObjectModel;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
+using System.IO;
 
 
 namespace UsersApp
@@ -11,11 +13,18 @@ namespace UsersApp
     {
         private DataUserRegOrAuth dataUsersRegistration = new DataUserRegOrAuth();
         private UserManagerSQLite userRegistrate = new UserManagerSQLite();
+        //private UserManager userRegistrate = new UserManager();
+        Stopwatch sw = new Stopwatch();
 
         public ViewModelRegistration(UserManagerSQLite userManager)
         {
             this.userRegistrate = userManager;
         }
+
+        //public ViewModelRegistration(UserManager userManager)
+        //{
+        //    this.userRegistrate = userManager;
+        //}
 
         public DataUserRegOrAuth DataUsersRegistration
         {
@@ -32,7 +41,9 @@ namespace UsersApp
             {
                 return new DelegateCommand((obj) =>
                 {
+                    sw.Start();
                     int error = userRegistrate.RegistrationUser(dataUsersRegistration);
+                    sw.Stop();
 
                     switch (error)
                     {
@@ -54,6 +65,13 @@ namespace UsersApp
                         case 0:
                             MessageBox.Show("Registrations is done", "Message");
                             //this.Close();
+                            TimeSpan ts = sw.Elapsed;
+
+                            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+                                ts.Hours, ts.Minutes, ts.Seconds,
+                                ts.Milliseconds / 10);
+                            using (StreamWriter writer = new StreamWriter("Timer.txt"))
+                                writer.WriteLine(elapsedTime);
                             break;
 
                     }

@@ -1,16 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1UgXd62qQho=",
+  "dgSpecHash": "vfbZrpRMDLY=",
   "success": true,
   "projectFilePath": "D:\\UserApp_Registration\\RegistrationForm\\HashingService\\HashingService.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.data.sqlite\\9.0.1\\microsoft.data.sqlite.9.0.1.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.1\\microsoft.data.sqlite.core.9.0.1.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

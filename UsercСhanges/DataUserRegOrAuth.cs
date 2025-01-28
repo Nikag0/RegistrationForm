@@ -1,5 +1,6 @@
 ﻿namespace UsercСhanges
 {
+    [Serializable]
     public class DataUserRegOrAuth : DataUser
     {
         private string password = "";
