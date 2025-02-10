@@ -12,19 +12,16 @@ namespace UsersApp
     public class ViewModelRegistration
     {
         private DataUserRegOrAuth dataUsersRegistration = new DataUserRegOrAuth();
-        private UserManagerSQLite userRegistrate = new UserManagerSQLite();
+        private UserManagerPGSQL userRegistrate = new UserManagerPGSQL();
+        //private UserManagerSQLite userRegistrate = new UserManagerSQLite();
         //private UserManager userRegistrate = new UserManager();
+
         Stopwatch sw = new Stopwatch();
 
-        public ViewModelRegistration(UserManagerSQLite userManager)
+        public ViewModelRegistration(UserManagerPGSQL userManager)
         {
             this.userRegistrate = userManager;
         }
-
-        //public ViewModelRegistration(UserManager userManager)
-        //{
-        //    this.userRegistrate = userManager;
-        //}
 
         public DataUserRegOrAuth DataUsersRegistration
         {
@@ -45,6 +42,14 @@ namespace UsersApp
                     int error = userRegistrate.RegistrationUser(dataUsersRegistration);
                     sw.Stop();
 
+                    TimeSpan ts = sw.Elapsed;
+                    string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+                        ts.Hours, ts.Minutes, ts.Seconds,
+                        ts.Milliseconds / 10);
+                    using (StreamWriter writer = new StreamWriter("Timer1.txt"))
+                        writer.WriteLine(elapsedTime);
+                    sw.Reset();
+
                     switch (error)
                     {
                         case 1:
@@ -64,14 +69,6 @@ namespace UsersApp
                             break;
                         case 0:
                             MessageBox.Show("Registrations is done", "Message");
-                            //this.Close();
-                            TimeSpan ts = sw.Elapsed;
-
-                            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-                                ts.Hours, ts.Minutes, ts.Seconds,
-                                ts.Milliseconds / 10);
-                            using (StreamWriter writer = new StreamWriter("Timer.txt"))
-                                writer.WriteLine(elapsedTime);
                             break;
 
                     }

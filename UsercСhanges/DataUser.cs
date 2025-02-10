@@ -8,7 +8,7 @@ namespace UsercСhanges
     {
         private string password = "";
         private string login = "";
-        private string hashPassword = "";
+        private string hashpassword = "";
         private string email = "";
 
         public string Password
@@ -30,7 +30,7 @@ namespace UsercСhanges
                 OnPropertyChanged();
             }
         }
-        public string HashPassword { get => hashPassword; set => hashPassword = value; }
+        public string HashPassword { get => hashpassword; set => hashpassword = value; }
         public string Email
         {
             get => email;

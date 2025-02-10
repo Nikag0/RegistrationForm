@@ -12,7 +12,8 @@ namespace UsersApp
 {
     public class ViewModelAuthorization : INotifyPropertyChanged
     {
-        private UserManagerSQLite userManager = new UserManagerSQLite();
+        private UserManagerPGSQL userManager = new UserManagerPGSQL();
+        //private UserManagerSQLite userManager = new UserManagerSQLite();
         //private UserManager userManager = new UserManager();
         private DataUserRegOrAuth dataUserAuthorization = new DataUserRegOrAuth();
 
@@ -24,19 +25,14 @@ namespace UsersApp
 
         public ViewModelAuthorization()
         {
-            userManager.LoadUsers();
-            sw.Start();
-            userManager.SerializeBinary();
-           //userManager.SerializeXML();
-            sw.Stop();
             //userManager.PasToHash();
 
-            TimeSpan ts = sw.Elapsed;
-            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-                ts.Hours, ts.Minutes, ts.Seconds,
-                ts.Milliseconds / 10);
-            using (StreamWriter writer = new StreamWriter("Timer.txt"))
-                writer.WriteLine(elapsedTime);
+            //userManager.SerializeBinary();
+            //userManager.SerializeXML();
+            //userManager.PasToHash();
+
+            //Запиcь результата Stopwatch в файл.
+
         }
 
         public DataUserRegOrAuth DataUserAuthorization
@@ -134,14 +130,23 @@ namespace UsersApp
             {
                 return new DelegateCommand((obj) =>
                 {
+                    sw.Start();
                     if (userManager.AuthorizationUser(dataUserAuthorization))
                     {
+                        sw.Stop();
                         MessageBox.Show("login is successful", "Message");
                     }
                     else
                     {
                         MessageBox.Show("The user is not registered or password was entered incorrectly", "Message");
                     }
+                    TimeSpan ts = sw.Elapsed;
+                    string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+                        ts.Hours, ts.Minutes, ts.Seconds,
+                        ts.Milliseconds / 10);
+                    using (StreamWriter writer = new StreamWriter("Timer.txt"))
+                        writer.WriteLine(elapsedTime);
+                    sw.Reset();
                 });
             }
         }
